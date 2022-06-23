@@ -29,4 +29,4 @@ In total, 884 (442 pairs) Illumina Next-Generation Sequencing files were recieve
 
 To align the paired-end reads to the reference genome, each pair of files were run through:
 
-     - BWA mem algorithm to perform a local alignment (due to its high speed and accuracy) both pre- and post- reference genome masking
+     - BWA mem algorithm to perform a local alignment (due to its high speed and accuracy) both pre and post reference genome masking
