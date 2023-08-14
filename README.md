@@ -1,4 +1,4 @@
-# Local Adaptation and Range Exanpansion in *Culex* Mosquitoes
+# Local Adaptation and Range Expansion in *Culex* Mosquitoes
 
 ## Introduction & Motivation
 *Culex tarsalis*, (also known as the Western Encephalitis Mosquito) is a North American mosquito species known for being the principal vector of the West Nile virus along with other arboviruses. This mosquito primarily inhabits the western U.S. and comprises of three genetically distinct genetic population clusters: the Pacific, Sonoran, and Midwest clusters. Due to *Cx. tarsalis* mosquitoes carrying dangerous diseases that infect both birds and livestock animals, questions arise pertaining to the possibility of them continuing to spread east of the Mississippi. Therefore, for this project, we will be examining:
