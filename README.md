@@ -10,7 +10,7 @@ This project investigates the genomic basis of local adaptation and potential ra
 
 ## Key Takeaways 🔎
 
-       ✓ Completed masking and mappability analysis of the *Cx. tarsalis* reference genome  
+       ✓ Completed masking and mappability analysis of the Cx. tarsalis reference genome  
        ✓ Identified orthogroups and gene duplication events across multiple Culex species  
        ✓ Annotated protein functions using InterProScan and UniFunc NLP tools  
        ✓ Conducted quality control and alignment of 884 Illumina NGS paired-end samples  
