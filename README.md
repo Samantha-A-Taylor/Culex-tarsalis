@@ -1,32 +1,97 @@
-# Local Adaptation and Range Expansion in *Culex tarsalis*: Comparative Genomics and Population-Level Analysis
-
-## Introduction & Motivation
-*Culex tarsalis*, (also known as the Western Encephalitis Mosquito) is a North American mosquito species known for being the principal vector of the West Nile virus along with other arboviruses. This mosquito primarily inhabits the western U.S. and comprises of three genetically distinct genetic population clusters: the Pacific, Sonoran, and Midwest clusters. Due to *Cx. tarsalis* mosquitoes carrying dangerous diseases that infect both birds and livestock animals, questions arise pertaining to the possibility of them continuing to spread east of the Mississippi. Therefore, for this project, we will be examining:
-
-     1. What environmental factors drive local adaptation and genetic divergence in different populations of Culex?
-     2. Can we predict the spread of Culex in the near future to better inform management practices to mitigate disease risks?
-     
+# Local Adaptation and Range Expansion in Culex tarsalis: Comparative Genomics and Population-Level Analysis (2021–2022)
+***
 <p align="center">
 <img src="https://user-images.githubusercontent.com/97530809/155350986-35c19f43-21f5-4962-86a7-393d43c75888.png" width="400" height="350">
   </p>
- 
-## Part One of This Project: The Reference Genome
-For this project, the first genome assembly of *Cx. tarsalis* by the UC Davis DNA Technologies Core [[1]](https://academic.oup.com/g3journal/article/11/2/jkaa063/6080661) from the Kern National Wildlife Refuge colony was used as the reference genome. Their team conducted a PacBio genome assembly, sequenced two Nextera libraries (Illumina), and used two pupae for 10X library preparation. To analyze and further investigate this genome, for the purposes of this project, we:
 
-     - Masked the genome with MaskFasta to improve alignment
-     - Determining reference genome mappability with GenMap
-     - Found orthogroups and gene duplication events with OrthoFinder
-     - Conducted gene ontology analysis with topGO
-     - Collected protein function predictive information with InterProScan
-     - Assigned orthogroups IDs to functional descriptions
-     - Used Natural Language Processing via UniFunc to simplify protein function annotations
+## Project Overview ☰
 
-## Part Two of This Project: The Sample Data
-In total, 884 (442 pairs) Illumina Next-Generation Sequencing files were recieved. Each file under-went quality control and was aligned as a pair to the reference genome. To ensure and improve sample quality, each file was run through:
+This project investigates the genomic basis of local adaptation and potential range expansion in *Culex tarsalis*, a principal vector of West Nile virus in North America. Using reference genome analysis, orthogroup identification, gene duplication events, protein function prediction, and population-level sequencing data, the project examines environmental and genetic factors driving divergence among Pacific, Sonoran, and Midwest mosquito populations. Insights aim to inform disease management and anticipate geographic spread.
 
-     - Trimmomatic to trim the reads
-     - FastQC to visually and quickly assess the data
+## Key Takeaways 🔎
 
-To align the paired-end reads to the reference genome, each pair of files were run through:
+       ✓ Completed masking and mappability analysis of the *Cx. tarsalis* reference genome  
+       ✓ Identified orthogroups and gene duplication events across multiple Culex species  
+       ✓ Annotated protein functions using InterProScan and UniFunc NLP tools  
+       ✓ Conducted quality control and alignment of 884 Illumina NGS paired-end samples  
+       ✓ Evaluated mapping efficiency pre- and post-genome masking using BWA-MEM  
+       ✓ Assessed alternative mapping approaches using Stampy for low-quality reads  
+       ✓ Linked orthogroups to Gene Ontology terms for functional analysis  
+       ✓ Simplified functional descriptions and visualized frequent terms via word cloud  
 
-     - BWA mem algorithm to perform a local alignment (due to its high speed and accuracy) both pre and post reference genome masking
+## Key Features 🔑
+
+* **Reference Genome Analysis:**
+
+       ✓ Masked repetitive regions with MaskFasta using a custom GFF3 library  
+       ✓ Computed genome mappability using GenMap to identify low-complexity regions  
+       ✓ Identified orthogroups and inferred gene duplications using OrthoFinder  
+       ✓ Constructed rooted species trees with STAG and visualized in Dendroscope  
+       ✓ Mapped gene duplications to nodes for Clemson and UC Davis reference genomes  
+
+* **Protein Function Annotation:**
+
+       ✓ Collected predictive protein function data with InterProScan  
+       ✓ Combined orthogroup information and functional annotations using SQLite  
+       ✓ Simplified protein function descriptions using UniFunc clustering  
+       ✓ Created frequency tables and word clouds for common functional terms  
+
+* **NGS Data Processing & Alignment:**
+
+       ✓ Performed quality trimming of 884 Illumina paired-end reads using Trimmomatic  
+       ✓ Conducted quality assessment pre- and post-trimming with FastQC  
+       ✓ Aligned reads to both unmasked and masked reference genomes using BWA-MEM  
+       ✓ Generated alignment statistics with Samtools to evaluate mapping efficiency  
+       ✓ Tested alternative alignment using Stampy for divergent or low-quality reads  
+       ✓ Filtered 386 high-quality samples for downstream analysis  
+
+* **Comparative Genomics & Functional Analysis:**
+
+       ✓ Mapped gene duplication events to species-specific nodes (Clemson, Davis, N1, C. quinquefasciatus, C. pipiens pallens)  
+       ✓ Linked orthogroups to Gene Ontology terms and simplified descriptions  
+       ✓ Aggregated annotations to visualize functional patterns across duplicated genes  
+       ✓ Created a consolidated orthogroup-to-description table for downstream analysis  
+
+## Visualizations 📶
+
+       ✓ Pre- and post-masking genome mappability distributions  
+       ✓ Rooted species tree with annotated gene duplication events  
+       ✓ Orthogroup duplication statistics per species and node  
+       ✓ Word cloud of most frequent functional annotations  
+       ✓ Read mapping statistics before and after genome masking  
+       ✓ FastQC per-base sequence quality plots for raw and trimmed data  
+
+## Technologies Used 🛠️
+
+       ✓ Python (Pandas, Matplotlib, NLTK)  
+       ✓ Bash / Shell scripting  
+       ✓ Bedtools  
+       ✓ GenMap  
+       ✓ OrthoFinder  
+       ✓ Dendroscope  
+       ✓ InterProScan  
+       ✓ UniFunc  
+       ✓ Trimmomatic  
+       ✓ FastQC  
+       ✓ BWA-MEM  
+       ✓ Samtools  
+       ✓ Stampy  
+       ✓ SQLite / SQLiteStudio  
+
+## Data 📂
+
+* **Source:**  
+       ✓ UC Davis Culex tarsalis reference genome (Kern National Wildlife Refuge colony)  
+       ✓ Illumina Next-Generation Sequencing paired-end datasets (884 files / 442 pairs)  
+       ✓ Comparative protein datasets from *Culex quinquefasciatus* and *Culex pipiens pallens*  
+
+* **Format:**  
+       ✓ FASTA, FASTQ, BAM/SAM, TSV/CSV for genome, annotation, and alignment data  
+       ✓ GFF3 for repeat annotation  
+       ✓ Visual outputs in PNG format for mappability, FastQC, and word clouds  
+
+## License
+
+MIT License  
+
+Copyright (c) 2022 Samantha-A-Taylor
